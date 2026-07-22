@@ -379,7 +379,10 @@ const { useState, useEffect, useCallback, useRef } = React;
 const HOTLINE = '0961.924.884';
 const HOTLINE_HREF = 'tel:0961924884';
 const COMPANY = 'Test Demo';
-const COMPANY_SUB = 'CÔNG TY TNHH CÔNG NGHỆ VÀ DỊCH VỤ 360';
+const COMPANY_SUB = 'CÔNG TY TNHH DỊCH VỤ AN NINH MẪU (TEST DEMO)';
+const MST = '0100000000-TEST';
+const EMAIL = 'demo@example.com';
+const ADDRESS = 'Tòa nhà Demo Building, Đường Test Sample, Q. Cầu Giấy, Hà Nội';
 
 const NAV_ITEMS = [
   { id: 'home',        label: 'Trang chủ' },
@@ -571,7 +574,7 @@ function Nav({ page, setPage, openQuote, onSelectSecuritySvc, onSelectSolutionTa
               <TestLogo size={42} />
               <div className="nav-logo-text">
                 <span className="nav-logo-name">{COMPANY}</span>
-                <span className="nav-logo-sub">MST: 0110847737 · ISO 9001:2015</span>
+                <span className="nav-logo-sub">MST: {MST} · ISO 9001:2015</span>
               </div>
             </div>
 
@@ -2881,24 +2884,21 @@ function ContactPage({ openQuote }) {
 
   const branches = [
     {
-      city: 'Hà Nội — Trụ sở chính',
-      addr: 'Tầng 2, số 777 Phúc Diễn, P. Xuân Phương, Q. Nam Từ Liêm, Hà Nội',
+      city: 'Hà Nội — Trụ sở chính (Mẫu Demo)',
+      addr: ADDRESS,
       phone: HOTLINE,
-      // Google Maps embed for 777 Phúc Diễn, Nam Từ Liêm, Hà Nội
-      mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5384623437556!2d105.76043117596887!3d21.021882887992987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab7ac0000001%3A0x9a8b4c2d1e3f5a6b!2zUGjDumMgRGnhu4duLCBYdcOibiBQaMawxqFuZywgTmFtIFThu6sgTGnDqm0sIEjDoCBO4buZaQ!5e0!3m2!1svi!2svn!4v1721000000000!5m2!1svi!2svn',
+      mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8639810443276!2d105.74685331540263!3d21.03812779283313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x105c50b64d4b1a47!2zSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1680000000000!5m2!1svi!2s',
     },
     {
-      city: 'TP. Hồ Chí Minh — Chi nhánh miền Nam',
-      addr: 'Tòa nhà Tân Bình Business Center, Q. Tân Bình, TP. Hồ Chí Minh',
+      city: 'TP. Hồ Chí Minh — Chi nhánh miền Nam (Mẫu Demo)',
+      addr: 'Tòa nhà Demo Center, Q. Tân Bình, TP. Hồ Chí Minh',
       phone: HOTLINE,
-      // Google Maps embed for Tân Bình, TP.HCM
       mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15678.186218524505!2d106.63905417490234!3d10.800831692387204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e60a2a4bcb%3A0xf5a92b4d2cd06c72!2zUXXhuq1uIFTDom4gQsOsbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaA!5e0!3m2!1svi!2svn!4v1721000000001!5m2!1svi!2svn',
     },
     {
-      city: 'Bình Dương — Văn phòng KCN',
-      addr: 'Đại Lộ Bình Dương, P. Hoà Phú, TP. Thủ Dầu Một, Bình Dương',
+      city: 'Bình Dương — Văn phòng KCN (Mẫu Demo)',
+      addr: 'Đại Lộ Bình Dương, TP. Thủ Dầu Một, Bình Dương',
       phone: HOTLINE,
-      // Google Maps embed for Thủ Dầu Một, Bình Dương
       mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15672.01800738786!2d106.64386427490909!3d10.980137392094523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317567ad66c3873b%3A0x8e6d38f4d2a9c1b0!2zVGjhu6cgROG6p3UgTeG7mXQsIELDrG5oIETGsMahbmc!5e0!3m2!1svi!2svn!4v1721000000002!5m2!1svi!2svn',
     },
   ];
@@ -2927,14 +2927,14 @@ function ContactPage({ openQuote }) {
                 <span className="info-icon">✉️</span>
                 <div className="info-content">
                   <span className="info-label">Email</span>
-                  <span className="info-value">vu.dominh@hostingviet.vn</span>
+                  <span className="info-value">{EMAIL}</span>
                 </div>
               </div>
               <div className="info-row">
                 <span className="info-icon">🏢</span>
                 <div className="info-content">
-                  <span className="info-label">Mã số thuế</span>
-                  <span className="info-value">0110847737</span>
+                  <span className="info-label">Mã số thuế (Demo)</span>
+                  <span className="info-value">{MST}</span>
                 </div>
               </div>
               <div className="info-row">
@@ -3127,7 +3127,7 @@ function Footer({ setPage }) {
               </div>
             </div>
             <p style={{fontSize:'0.8rem',color:'var(--slate-500)',lineHeight:'1.6',marginBottom:'1rem'}}>
-              Chuyên cung cấp dịch vụ bảo vệ an ninh chuyên nghiệp B2B. MST: 0110847737. Đạt chuẩn ISO 9001:2015.
+              Chuyên cung cấp dịch vụ bảo vệ an ninh chuyên nghiệp B2B. MST: {MST}. Đạt chuẩn ISO 9001:2015.
             </p>
             <a href={HOTLINE_HREF} style={{display:'inline-flex',alignItems:'center',gap:'6px',color:'var(--gold-bright)',fontWeight:'700',fontSize:'0.95rem',textDecoration:'none'}}>
               📞 {HOTLINE}
@@ -3172,8 +3172,8 @@ function Footer({ setPage }) {
           <div className="footer-col">
             <h4>Liên hệ nhanh</h4>
             <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
-              <div style={{fontSize:'0.8rem',color:'var(--slate-500)'}}>📍 Tầng 2, số 777 Phúc Diễn, Xuân Phương, Nam Từ Liêm, Hà Nội</div>
-              <div style={{fontSize:'0.8rem',color:'var(--slate-500)'}}>✉️ vu.dominh@hostingviet.vn</div>
+              <div style={{fontSize:'0.8rem',color:'var(--slate-500)'}}>📍 {ADDRESS}</div>
+              <div style={{fontSize:'0.8rem',color:'var(--slate-500)'}}>✉️ {EMAIL}</div>
               <a href={HOTLINE_HREF} className="btn btn-gold" style={{marginTop:'0.5rem',justifyContent:'center',textDecoration:'none',fontSize:'0.8rem'}}>
                 Gọi ngay 24/7
               </a>
@@ -3182,7 +3182,7 @@ function Footer({ setPage }) {
         </div>
         <div className="footer-bottom">
           <span>© 2026 {COMPANY} — {COMPANY_SUB}</span>
-          <span>MST: 0110847737 | ISO 9001:2015 Certified</span>
+          <span>MST: {MST} | ISO 9001:2015 Certified</span>
         </div>
       </div>
     </footer>
